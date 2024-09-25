@@ -10,21 +10,41 @@ public class Exercise04 {
         System.out.println("######################################################################");
         System.out.println("Ejemplos de cálculos CON estructuras de control:");
 
+        System.out.println(sumNum(5));
+        System.out.println(sumEvenNum(20));
+        System.out.println(factorial(7));
+        System.out.println(recursiveFactorial(7));
+
     }
 
     public static int sumNum(int num) {
-        return 0;
+
+        int suma = 0;
+        for (int i = 1; i <= num; i++) {
+            suma += i;
+        }
+        return suma;
     }
 
     public static int sumEvenNum(int num) {
-        return 0;
+
+        return num * (num + 1);
     }
 
     public static int factorial(int num) {
-        return 0;
+        int i;
+         int factorial=1;
+        for( i=1;i<=num;i++){
+            factorial= factorial*i;
+        }
+            return factorial;
     }
 
     public static int recursiveFactorial(int num) {
-        return 0;
+        if(num == 0){
+            return 1;
+        }
+        else
+            return num * factorial(num-1);
     }
 }
